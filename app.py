@@ -1,1 +1,3 @@
-print("Metal Vegan Recipe Randomizer: Level 0")
+metalrecipes = ["Brutal Chickpea Curry", "Crushing Black Bean Tacos", "Dark & Grim Lentil Tacos"]
+
+print(metalrecipes)
