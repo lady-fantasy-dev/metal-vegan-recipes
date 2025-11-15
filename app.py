@@ -1,13 +1,21 @@
 import random
 
-metalrecipes = ["Brutal Chickpea Curry", "Crushing Black Bean Tacos", "Dark & Grim Lentil Tacos"]
+pairings =[
+  {"dish": "Brutal Chickpea Curry", "band": "Behemoth"},
+  {"dish": "Crushing Black Bean Tacos", "band": "Cannibal Corpse"},
+  {"dish": "Dark & Grim Lentil Tacos", "band": "Katatonia"},
+  {"dish": "Extreme Cauliflower Wings", "band": "Dark Funeral"}
+]
 
-print("Today's metal vegan recipe is", random.choice(metalrecipes), "🤘🔥")
+pairing = random.choice(pairings)
+print("Today's metal vegan dish is", pairing["dish"], "paired well with", pairing["band"], "🤘🔥")
 
 while True:
   user_input = input("Do you want another random recipe? Enter y or n: ")
+  pairing = random.choice(pairings)
+
   if user_input.lower() == "y":
-    print("Your next metal vegan recipe is", random.choice(metalrecipes), "🤘🔥")
+    print("Your next metal vegan recipe is", pairing["dish"], "paired well with", pairing["band"],"🤘🔥")
   elif user_input.lower() == "n":
     print("Okay, goodbye!")
     break
