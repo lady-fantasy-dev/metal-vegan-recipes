@@ -8,14 +8,18 @@ pairings =[
 ]
 
 pairing = random.choice(pairings)
-print("Today's metal vegan dish is", pairing["dish"], "paired well with", pairing["band"], "🤘🔥")
+
+def show_pairing(pairing):
+  print("Tonight's metal vegan dish is", pairing["dish"], "paired well with", pairing["band"], "🤘🔥")
+
+show_pairing(pairing)
 
 while True:
   user_input = input("Do you want another random recipe? Enter y or n: ")
   pairing = random.choice(pairings)
 
   if user_input.lower() == "y":
-    print("Your next metal vegan recipe is", pairing["dish"], "paired well with", pairing["band"],"🤘🔥")
+    show_pairing(pairing)
   elif user_input.lower() == "n":
     print("Okay, goodbye!")
     break
